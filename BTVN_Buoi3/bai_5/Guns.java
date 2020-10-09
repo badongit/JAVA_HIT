@@ -10,11 +10,11 @@ public class Guns {
     public void Shoot(int x){
         if(ammoNumber - x >= 0) {
             ammoNumber -= x;
-        } else if(ammoNumber == 0) {
-            System.out.println("Hết đạn");
         } else {
             ammoNumber = 0;
-            System.out.println("Không đủ đạn");
+        }
+        if(ammoNumber == 0) {
+            System.out.println("Hết đạn");
         }
     }
 

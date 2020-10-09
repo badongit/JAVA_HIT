@@ -6,7 +6,7 @@ public class RunMain {
         Guns ozaKhanh = new Guns();
         toKuDoan.Load(100);
         ozaKhanh.Load(100);
-        while(toKuDoan.getAmmoNumber() != 0 && ozaKhanh.getAmmoNumber() != 0){
+        do{
             int x = (int)(Math.random()*10 + 1);
             toKuDoan.Shoot(x);
             x = (int)(Math.random()*10 + 1);
@@ -20,6 +20,6 @@ public class RunMain {
                 System.out.println("OzaKhanh thua.");
                 System.out.println("TokuDoan còn " + toKuDoan.getAmmoNumber() + " viên đạn.");
             }
-        }
+        }while(toKuDoan.getAmmoNumber() != 0 && ozaKhanh.getAmmoNumber() != 0);
     }
 }
